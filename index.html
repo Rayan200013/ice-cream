@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream Tomorrow?</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Do you want to have some ice cream tomorrow?</h1>
+      <div class="buttons">
+        <button onclick="sendScreenshot()">Yes</button>
+        <button onclick="blockButton()">No</button>
+      </div>
+    </div>
+
+    <script>
+      function sendScreenshot() {
+        alert("Please send this screenshot to Rayan the man.");
+      }
+
+      function blockButton() {
+        const noButton = document.querySelector("button:nth-child(2)");
+        noButton.disabled = true;
+        noButton.style.backgroundColor = "#ccc";
+        noButton.style.cursor = "not-allowed";
+      }
+    </script>
+  </body>
+</html>
